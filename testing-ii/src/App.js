@@ -16,7 +16,7 @@ class App extends Component {
     e.preventDefault()
     const balls = this.state.balls
     const strikes = this.state.strikes
-    if(balls === 3 || strikes === 2) {
+    if(balls >= 3 || strikes >= 2) {
       this.setState({balls: 0, strikes: 0})
     } else {
       this.setState({
@@ -30,7 +30,7 @@ class App extends Component {
     e.preventDefault()
     const balls = this.state.balls
     const strikes = this.state.strikes
-    if(balls === 3 || strikes === 2) {
+    if(balls >= 3 || strikes >= 2) {
       this.setState({balls: 0, strikes: 0})
     } else {
       this.setState({
@@ -43,7 +43,6 @@ class App extends Component {
   foul = e => {
     e.preventDefault()
 
-    const balls = this.state.balls
     const strikes = this.state.strikes
 
     if(strikes === 2) {
@@ -65,8 +64,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Balls: {this.state.balls}</h1>
-        <h1>Strikes: {this.state.strikes}</h1>
+        <h1 title='ballCount'>Balls: {this.state.balls}</h1>
+        <h1 title='strikeCount'>Strikes: {this.state.strikes}</h1>
         <Dashboard 
           balls={this.resetWhenBothBalls} 
           strikes={this.resetWhenBothStrikes}

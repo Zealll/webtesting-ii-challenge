@@ -7,10 +7,10 @@ function Dashboard(props) {
 
     return(
         <div>
-            <button onClick={props.strikes}>Strike</button>
-            <button onClick={props.balls}>Ball</button>
-            <button onClick={props.foul}>Foul</button>
-            <button onClick={props.hit}>Hit</button>
+            <button title='strikeButton' onClick={props.strikes}>Strike</button>
+            <button title='ballButton' onClick={props.balls}>Ball</button>
+            <button title='foulButton' onClick={props.foul}>Foul</button>
+            <button title='hitButton' onClick={props.hit}>Hit</button>
         </div>
     )
 }
